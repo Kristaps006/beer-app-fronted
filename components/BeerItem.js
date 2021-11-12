@@ -2,6 +2,8 @@ import Link from 'next/link'
 
 const BeerList =({beer}) =>{
 
+console.log(beer.slug)
+
 
    
     return (
@@ -11,6 +13,8 @@ const BeerList =({beer}) =>{
             <Link href={`/beers/${beer.slug}`} >
                  <a>Details</a>
             </Link>
+           
+
     
         </div>
     

@@ -30,8 +30,9 @@ export default function HomePage( {beers}) {
      const newBeer = beers.push(values)
       
     setValues(newBeer)
-    // setValues({...values,name:"",description:""})
+    setValues({...values,name:"",description:""})
     clearState()
+  
 
   }
 
@@ -84,12 +85,13 @@ export default function HomePage( {beers}) {
 //due to rendering on server for SEO crawlers 
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${BEER_URL}/api/beers`)
+  const res = await fetch(`${BEER_URL}/beers`)
   const beers = await res.json()
 
   return {
     props: 
-      beers
+      {beers},
+      revalidate: 1,
     
   }
 }
