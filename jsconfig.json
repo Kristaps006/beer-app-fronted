@@ -1,0 +1,14 @@
+// added compiler option so it is easier to import components
+
+{
+
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths":{
+            "@/components/*":["components/*"],
+            "@/styles/*":["styles/*"],
+            "@/config/*":["config/*"]
+        }
+    }
+
+}
