@@ -1,6 +1,6 @@
 import {BEER_URL} from '@/config/index'
 import Layout from '@/components/Layout'
-import BeerList from '@/components/BeerList'
+import BeerItem from '@/components/BeerItem'
 import { useState } from 'react'
 
 export default function HomePage( {beers}) {
@@ -46,7 +46,7 @@ export default function HomePage( {beers}) {
       <Layout>
         <h1>This is home Page about beers</h1>
         {beers.map((beer)=>(
-          <BeerList key={beer.id} beer={beer} />
+          <BeerItem key={beer.id} beer={beer} />
         ))}
           
           <form onSubmit={handleSubmit} >
@@ -88,8 +88,8 @@ export const getStaticProps = async () => {
   const beers = await res.json()
 
   return {
-    props: {
-      beers,
-    },
+    props: 
+      beers
+    
   }
 }

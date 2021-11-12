@@ -8,7 +8,7 @@ const BeerList =({beer}) =>{
         <div>
             <h1>{beer.name}</h1>
             <p>{beer.description}</p>
-            <Link href={'/beers/'+ beer.id} key={beer.id} >
+            <Link href={`/beers/${beer.slug}`} >
                  <a>Details</a>
             </Link>
     
