@@ -6,3 +6,7 @@ export default function handler(req, res) {
 
   res.status(200).json(beerSlug)
 }
+
+
+
+This is playground of data before I connected to Strapi. Here I fetch slug from data.json

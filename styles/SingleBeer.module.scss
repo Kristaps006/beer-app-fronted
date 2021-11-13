@@ -1,0 +1,62 @@
+.single__beer{
+
+max-width: 80rem;
+box-shadow: 0px 0px 24px -8px rgba(0,0,0,0.2);
+border-radius: 6px;
+margin: 3rem auto ;
+padding: 3rem;
+ text-align: center;
+
+    h1{
+
+        font-size: 4rem;
+        margin: 2rem;
+    }
+
+    h2{
+
+        font-size: 3rem;
+    }
+
+
+    p{
+
+        padding: 3rem;
+        box-shadow: 0px 0px 24px -8px rgba(0,0,0,0.2);
+        max-width: 70%;
+        margin: 3rem auto;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+
+    .btn_box{
+
+        display: flex;
+        gap:2rem;
+        justify-content: center;
+    }
+
+
+
+    .btn_back, .btn_delete{
+
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    //padding: 10px 25px;
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color:rgb(48, 44, 44);
+    color:white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+   
+    
+    
+
+        }
+
+}

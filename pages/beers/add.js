@@ -3,17 +3,18 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import {BEER_URL} from '@/config/index'
 import success, { Toaster } from 'react-hot-toast';
+import styles from '@/styles/Add.module.scss'
 
-// import {API_URL} from '@/components/index'
 
 
-export default function addBeer() {
+export default function addBeer({beers}) {
 
 
     const [ beer, setBeer] = useState({
 
         name:'',
-        description:''
+        description:'',
+        type:''
     })
 
     const router = useRouter()
@@ -54,31 +55,52 @@ export default function addBeer() {
     return (
         <Layout title='Add Beer'>
         <Toaster/>
-        
-            <h1>Add Beer</h1>
-
-            <form onSubmit={submitBeer}>
-                <label htmlFor="name">Beer Name</label>
-                <input 
-                type="text" 
-                id="name"
-                 name="name" 
-                 value={beer.name}
-                onChange={inputChange}
-                required
-                />
-                <label htmlFor="description">Description</label>
-                <input 
-                type="text" 
-                id="description"
-                 name="description" 
-                 value={beer.description}
-                onChange={inputChange}
-                required
-                />
-                
-                <input type="submit" value="add beer" />
+        <div className={styles.add__container}>
+            <h1 className={styles.fav_beer}>Add your favorite beer</h1>
+            <form className={styles.beer_form} onSubmit={submitBeer}>
+                <div className={styles.name}>
+                    <label htmlFor="name">Beer Name</label>
+                    <input 
+                    type="text" 
+                    id="name"
+                    name="name" 
+                    value={beer.name}
+                    onChange={inputChange}
+                    required
+                    />
+                </div>
+               <div className={styles.desc}> 
+                    <label htmlFor="description">Description</label>
+                    <textarea
+                    type="text" 
+                    id="description"
+                    name="description" 
+                    value={beer.description}
+                    onChange={inputChange}
+                    required
+                    />
+               </div> 
+                <div className={styles.type}>
+                    <label htmlFor="type">Beer Type</label>
+                    <input 
+                    type="text" 
+                    id="type"
+                    name="type" 
+                    value={beer.type}
+                    onChange={inputChange}
+                    required
+                    />
+                </div>
+                <input  className={styles.btn} type="submit" value="add beer" />
             </form>
+            
+        </div>
         </Layout>
     )
 }
+
+
+
+
+
+  

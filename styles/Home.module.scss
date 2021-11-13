@@ -1,0 +1,36 @@
+.homepage{
+    height: 100vh;
+
+h1{
+
+    font-size: 4rem;
+    text-align: center;
+    font-size: 600;
+    margin:3rem 0rem
+
+}
+
+
+&__text{
+
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+
+
+}
+
+.beeritem_wrapper{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding: 2rem;
+    max-width: 100rem;
+    margin: 5rem auto;
+}
+
+
+
+
+
+}
