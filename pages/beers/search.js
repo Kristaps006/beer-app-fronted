@@ -23,7 +23,8 @@ export default function Search({beers}) {
         )
     }
 
-
+/* Fetching serversideprops to constantly update the data. Using query to match
+ the search term that is passed through the router in BeerSearch component */
 
 export async function getServerSideProps({query: {term}}){
 

@@ -9,4 +9,4 @@ export default function handler(req, res) {
 
 
 
-This is playground of data before I connected to Strapi. Here I fetch slug from data.json
+// This is playground of data before I connected to Strapi. Here I fetch slug from data.json
