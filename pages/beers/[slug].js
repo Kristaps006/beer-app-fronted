@@ -50,7 +50,7 @@ export default function SingleBeer({beer}) {
 }
 
 
-// we get
+// we get serverside props and fetch slug based query
 
 export async function getServerSideProps({query: {slug}}){
     

@@ -28,6 +28,9 @@ export default function Search({beers}) {
 
 export async function getServerSideProps({query: {term}}){
 
+
+ // used qs.stringify to match query to our search term that is being passed to URL
+
     const query = qs.stringify({
         _where: {
           _or: [

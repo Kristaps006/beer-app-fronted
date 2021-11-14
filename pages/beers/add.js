@@ -19,7 +19,7 @@ export default function addBeer({beers}) {
 
     const router = useRouter()
 
-    // Custom notification that is added when 
+    // Custom notification that is added when we send data 
 
     const notify = () => success('Your Beer is Added BO',{
         style: {
@@ -48,6 +48,8 @@ export default function addBeer({beers}) {
           body: JSON.stringify(beer)
       })
        if(res.ok){
+
+        // we push the slug data to URL and get directed to specific page based on slug
            const data = await res.json()
            router.push(`/beers/${data.slug}`)
            notify()

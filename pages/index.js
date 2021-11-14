@@ -6,7 +6,12 @@ import styles from '@/styles/Home.module.scss'
 export default function HomePage( {beers}) {
 
 
-  /*const [values, setValues] = useState({
+  /*
+  
+  Commented out section is used as an example to show how we could add beer locally using next api routes 
+  
+
+  const [values, setValues] = useState({
     name: '',
     description: '',
    
