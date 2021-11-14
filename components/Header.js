@@ -1,4 +1,4 @@
-// import styles from '@styles/Header.module.css'
+
 import Link from 'next/link'
 import styles from '@/styles/Header.module.scss'
 import Image from 'next/image'

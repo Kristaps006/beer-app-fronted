@@ -7,7 +7,7 @@ export default function NotFound() {
             <p>Ups....Bo, Apperantly you hit the wall</p> 
             <p>Please, go Back</p>
             <Link href="/">
-                 <button>GO</button>
+                 <button>Back</button>
             </Link>
             
         </div>

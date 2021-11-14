@@ -50,6 +50,7 @@ export default function SingleBeer({beer}) {
 }
 
 
+// we get
 
 export async function getServerSideProps({query: {slug}}){
     

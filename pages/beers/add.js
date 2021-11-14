@@ -19,6 +19,8 @@ export default function addBeer({beers}) {
 
     const router = useRouter()
 
+    // Custom notification that is added when 
+
     const notify = () => success('Your Beer is Added BO',{
         style: {
           border: '1px solid black',
@@ -36,7 +38,7 @@ export default function addBeer({beers}) {
 
     const submitBeer= async (e)=>{
         e.preventDefault()
-      notify()
+     
 
       const res = await fetch(`${BEER_URL}/beers`,{
           method:'POST',
@@ -48,6 +50,7 @@ export default function addBeer({beers}) {
        if(res.ok){
            const data = await res.json()
            router.push(`/beers/${data.slug}`)
+           notify()
        }
     }
     
